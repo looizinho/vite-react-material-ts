@@ -3,6 +3,7 @@ import type EditorJS from '@editorjs/editorjs'
 import Header from '@editorjs/header'
 import ListTool from '@editorjs/list'
 import Comment, { type RenderBody } from 'editorjs-comment'
+import Marker from '@editorjs/marker'
 import type { OutputData } from '@editorjs/editorjs'
 import { Box, CircularProgress, Stack, Typography } from '@mui/material'
 
@@ -266,6 +267,10 @@ const RichTextEditor = () => {
         placeholder: 'Escreva aqui usando blocos dinâmicos...',
         data: initialData,
         tools: {
+          Marker: {
+            class: Marker,
+            shortcut: 'CMD+SHIFT+M',
+          },
           header: Header,
           list: {
             class: ListTool,

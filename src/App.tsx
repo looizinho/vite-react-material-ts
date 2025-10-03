@@ -1,8 +1,6 @@
 import { useState } from 'react'
 import AddIcon from '@mui/icons-material/Add'
-import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined'
 import RestartAltIcon from '@mui/icons-material/RestartAlt'
-import WbSunnyOutlinedIcon from '@mui/icons-material/WbSunnyOutlined'
 import {
   Box,
   Button,
@@ -12,35 +10,12 @@ import {
   Chip,
   Container,
   Divider,
-  IconButton,
   Stack,
   Typography,
 } from '@mui/material'
-import { useColorScheme } from '@mui/material/styles'
 import RichTextEditor from './components/RichTextEditor'
 
 const assistChips = ['Design Tokens', 'Componentes', 'Temas Dinâmicos']
-
-function ModeToggle() {
-  const { mode, setMode } = useColorScheme()
-
-  if (!mode) {
-    return null
-  }
-
-  const isLightMode = mode === 'light'
-
-  return (
-    <IconButton
-      aria-label={isLightMode ? 'Ativar tema escuro' : 'Ativar tema claro'}
-      color="primary"
-      onClick={() => setMode(isLightMode ? 'dark' : 'light')}
-      sx={{ borderRadius: 999, border: '1px solid', borderColor: 'divider' }}
-    >
-      {isLightMode ? <DarkModeOutlinedIcon /> : <WbSunnyOutlinedIcon />}
-    </IconButton>
-  )
-}
 
 function App() {
   const [count, setCount] = useState(0)
@@ -65,11 +40,10 @@ function App() {
                 Interface exemplar com MUI
               </Typography>
               <Typography variant="body1" color="text.secondary">
-                Explore os componentes com a identidade visual do Material You. Ajuste o modo, interaja com o
-                contador e veja como o tema responde automaticamente.
+                Explore os componentes com a identidade visual do Material You. Interaja com o contador e veja como
+                o tema responde automaticamente.
               </Typography>
             </Box>
-            <ModeToggle />
           </Stack>
 
           <Card variant="outlined" sx={{ borderRadius: 5 }}>
