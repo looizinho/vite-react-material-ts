@@ -17,6 +17,7 @@ import {
   Typography,
 } from '@mui/material'
 import { useColorScheme } from '@mui/material/styles'
+import RichTextEditor from './components/RichTextEditor'
 
 const assistChips = ['Design Tokens', 'Componentes', 'Temas Dinâmicos']
 
@@ -111,6 +112,23 @@ function App() {
                 Ver documentação do Material 3
               </Button>
             </CardActions>
+          </Card>
+
+          <Card variant="outlined" sx={{ borderRadius: 5 }}>
+            <CardContent>
+              <Stack spacing={3}>
+                <Box>
+                  <Typography variant="h5" component="h2" gutterBottom>
+                    Editor de conteúdo rico
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    Utilize o EditorJS para criar documentos modulares com blocos reutilizáveis. Os dados podem ser
+                    exportados em JSON para persistência ou integrações futuras.
+                  </Typography>
+                </Box>
+                <RichTextEditor />
+              </Stack>
+            </CardContent>
           </Card>
 
           <Box>
