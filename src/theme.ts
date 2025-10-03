@@ -41,7 +41,7 @@ const theme = extendTheme({
     },
   },
   shape: {
-    borderRadius: 16,
+    borderRadius: 5,
   },
   typography: {
     fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
